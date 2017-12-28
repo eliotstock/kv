@@ -21,12 +21,11 @@
         <!--
         Your job:
         1. Register for the Android backup service at https://developer.android.com/google/backup/signup.html
-        2. Create app/res/values/keys.xml
+        2. Create app/res/values/keys.xml. This file is .gitignore'd already.
         3. Add a single string value to that file like so:
             <resources>
-                <string name="backup_api_key">YOUR+API_KEY</string>
+                <string name="backup_api_key">YOUR_API_KEY</string>
             </resources>
-        4. app/res/values/keys.xml is .gitignor'ed.
         -->
         <meta-data android:name="com.google.android.backup.api_key"
             android:value="@string/backup_api_key" />

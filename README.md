@@ -8,13 +8,13 @@ https://developer.android.com/guide/topics/data/keyvaluebackup.html
 
 * Get an API key for the Android backup service: https://developer.android.com/google/backup/signup.html
 
-* Create `app/res/values/keys.xml`. This file is `.gitignore`d already.
+* Create `app/src/res/values/keys.xml`. This file is `.gitignore`d already.
 
 * Add a single string value to that file like so:
 
 ```
 <resources>
-   <string name="backup_api_key">YOUR+API_KEY</string>
+   <string name="backup_api_key">YOUR_API_KEY</string>
 </resources>
 ```
 
@@ -28,6 +28,6 @@ https://developer.android.com/guide/topics/data/keyvaluebackup.html
 
 * Backup operations are logged to a file and shown on the app UI.
 
-* To backup to a file instead of Google's cloud, use `adb shell bmgr`. See this page for details:
+* To kick off a backup manually, or to backup to a file on your host machine instead of Google's cloud, use `adb shell bmgr`. See this page for details:
 
 https://developer.android.com/guide/topics/data/testingbackup.html
