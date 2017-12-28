@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.eliotstock.kv">
+
+    <!-- You can transition your app to full-data backups by setting android:fullBackupOnly to true
+    in the <application> element in the manifest file. When running on a device with Android 5.1
+    (API level 22) or lower, your app ignores this value in the manifest, and continues performing
+    Key/Value Backups. When running on a device with Android 6.0 (API level 23) or higher, your app
+    performs Auto Backup instead of Key/Value Backup. -->
+    <application
+        android:name=".KvApplication"
+        android:allowBackup="true"
+        android:backupAgent=".KvBackupAgent"
+        android:backupInForeground="true"
+        android:restoreAnyVersion="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--
+        Your job:
+        1. Register for the Android backup service at https://developer.android.com/google/backup/signup.html
+        2. Create app/res/values/keys.xml
+        3. Add a single string value to that file like so:
+            <resources>
+                <string name="backup_api_key">YOUR+API_KEY</string>
+            </resources>
+        4. app/res/values/keys.xml is .gitignor'ed.
+        -->
+        <meta-data android:name="com.google.android.backup.api_key"
+            android:value="@string/backup_api_key" />
+
+        <activity android:name=".KvActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

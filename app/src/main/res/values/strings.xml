@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">K/V</string>
+    <string name="button_update_value">Update value</string>
+    <string name="button_request_backup">Request backup</string>
+    <string name="button_request_restore">Request restore</string>
+    <string name="shared_pref_value">Shared preference value</string>
+    <string name="missing_api_key_dialog">No API key found for the Android backup service. See comments in AndroidManifest.xml before running.</string>
+    <string name="ok">Ok</string>
+</resources>
